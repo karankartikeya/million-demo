@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Banner from '@/components/banner'
+import { block } from 'million'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+function Home() {
   return (
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
@@ -114,7 +115,12 @@ export default function Home() {
           </p>
         </a>
       </div>
-      <Banner/>
+      <Banner />
     </main>
   )
 }
+
+
+
+const AppBlock = block(Home)
+export default AppBlock;
